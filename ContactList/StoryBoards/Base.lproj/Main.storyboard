@@ -11,7 +11,7 @@
         <!--Contacts list-->
         <scene sceneID="DAH-tc-o11">
             <objects>
-                <tableViewController id="OkL-hi-5JN" sceneMemberID="viewController">
+                <tableViewController id="OkL-hi-5JN" customClass="ContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="EQr-x4-bL5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="2Br-Bq-iNg" kind="show" id="Ibh-fK-g23"/>
+                                    <segue destination="2Br-Bq-iNg" kind="show" identifier="" id="Ibh-fK-g23"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="-31" y="618"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Info View Controller-->
         <scene sceneID="tjT-mf-4i3">
             <objects>
-                <viewController id="2Br-Bq-iNg" sceneMemberID="viewController">
+                <viewController id="2Br-Bq-iNg" customClass="ContactInfoViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QG2-Rk-4Sm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ciz-d8-rj1"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="k5W-xr-xv1" id="3rS-2b-yDY"/>
+                        <outlet property="fullNameLabel" destination="ECx-i7-d9A" id="P9j-jE-abo"/>
+                        <outlet property="numberLabel" destination="BGS-hS-t9n" id="N6u-tp-2cI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCa-Ru-Wgc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
