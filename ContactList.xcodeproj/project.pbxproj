@@ -16,7 +16,8 @@
 		6E41226C29B0FDDD003373C5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41226B29B0FDDD003373C5 /* Person.swift */; };
 		6E41227029B25997003373C5 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41226F29B25997003373C5 /* ContactListViewController.swift */; };
 		6E41227229B26419003373C5 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41227129B26418003373C5 /* ContactInfoViewController.swift */; };
-		6E41227429B29041003373C5 /* PersonalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41227329B29041003373C5 /* PersonalListViewController.swift */; };
+		6E41227429B29041003373C5 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41227329B29041003373C5 /* PersonListViewController.swift */; };
+		6E41227829B36149003373C5 /* StartTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41227729B36149003373C5 /* StartTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		6E41226B29B0FDDD003373C5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		6E41226F29B25997003373C5 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		6E41227129B26418003373C5 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
-		6E41227329B29041003373C5 /* PersonalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalListViewController.swift; sourceTree = "<group>"; };
+		6E41227329B29041003373C5 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		6E41227729B36149003373C5 /* StartTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			children = (
 				6E41226F29B25997003373C5 /* ContactListViewController.swift */,
 				6E41227129B26418003373C5 /* ContactInfoViewController.swift */,
-				6E41227329B29041003373C5 /* PersonalListViewController.swift */,
+				6E41227329B29041003373C5 /* PersonListViewController.swift */,
+				6E41227729B36149003373C5 /* StartTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,10 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E41227429B29041003373C5 /* PersonalListViewController.swift in Sources */,
+				6E41227429B29041003373C5 /* PersonListViewController.swift in Sources */,
 				6E41226C29B0FDDD003373C5 /* Person.swift in Sources */,
 				6E41226A29B0FDCA003373C5 /* DataStore.swift in Sources */,
 				6E41225129B0FCEC003373C5 /* AppDelegate.swift in Sources */,
+				6E41227829B36149003373C5 /* StartTabBarController.swift in Sources */,
 				6E41225329B0FCEC003373C5 /* SceneDelegate.swift in Sources */,
 				6E41227029B25997003373C5 /* ContactListViewController.swift in Sources */,
 				6E41227229B26419003373C5 /* ContactInfoViewController.swift in Sources */,
