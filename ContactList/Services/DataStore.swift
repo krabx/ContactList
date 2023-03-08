@@ -5,7 +5,7 @@
 //  Created by Богдан Радченко on 02.03.2023.
 //
 
-class DataStore {
+final class DataStore {
     static let shared = DataStore()
     
     let names = [
