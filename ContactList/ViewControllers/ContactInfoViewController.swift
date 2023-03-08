@@ -9,8 +9,6 @@ import UIKit
 
 class ContactInfoViewController: UIViewController {
     
-    
-    @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var numberLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
@@ -19,7 +17,7 @@ class ContactInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fullNameLabel.text = persons.fullName
+        title = persons.fullName
         numberLabel.text = persons.number
         emailLabel.text = persons.emailAddress
     }

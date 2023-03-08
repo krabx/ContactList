@@ -2,13 +2,12 @@
 //  StartTabBarController.swift
 //  ContactList
 //
-//  Created by Богдан Радченко on 04.03.2023.
+//  Created by Богдан Радченко on 08.03.2023.
 //
 
 import UIKit
 
-final class StartTabBarController: UITabBarController {
-    let persons = Person.getPerson()
+class StartTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +15,12 @@ final class StartTabBarController: UITabBarController {
     }
     
     private func sendContacts() {
-        guard let tabBarViewControllers = viewControllers else { return }
-        for tabBarViewController in tabBarViewControllers {
-            guard let navigationVC = tabBarViewController as? UINavigationController else { return }
-            if let contactListVC = navigationVC.topViewController as? ContactListViewController {
-                contactListVC.contacts = persons
-            } else if let personListVC = navigationVC.topViewController as? PersonListViewController {
-                    personListVC.persons = persons
-            }
-        }
+        guard let contactsVC = viewControllers?[0] as? ContactListViewController else { return }
+        guard let personsVC = viewControllers?[1] as? PersonListViewController else { return }
+        
+        let persons = Person.getPersons()
+        
+        contactsVC.contacts = persons
+        personsVC.persons = persons
     }
 }

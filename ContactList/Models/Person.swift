@@ -5,30 +5,36 @@
 //  Created by Богдан Радченко on 02.03.2023.
 //
 
-import Foundation
-
 struct Person {
-    let fullName: String
+    let name: String
+    let surname: String
     let number: String
     let emailAddress: String
     
-    static func getPerson() -> [Person] {
+    var fullName: String {
+        name + " " + surname
+    }
+    
+    static func getPersons() -> [Person] {
         
         var persons: [Person] = []
         
-        var shuffledNames = names.shuffled()
-        var shuffledSurnames = surnames.shuffled()
-        var shuffledNumbers = phoneNumbers.shuffled()
-        var shuffledEmails = emails.shuffled()
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let numbers = DataStore.shared.phoneNumbers.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
         
-        while shuffledNames.count != 0 {
-            let person = Person(fullName: shuffledNames.remove(at: Int.random(in: 0..<shuffledNames.count)) + " " + shuffledSurnames.remove(at: Int.random(in: 0..<shuffledSurnames.count)), number: shuffledNumbers.remove(at: Int.random(in: 0..<shuffledNumbers.count)), emailAddress: shuffledEmails.remove(at: Int.random(in: 0..<shuffledEmails.count)))
-            
+        let minCount = min(names.count, surnames.count, numbers.count, emails.count)
+        
+        for index in 0..<minCount {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                number: numbers[index],
+                emailAddress: emails[index]
+            )
             persons.append(person)
         }
-        
         return persons
     }
 }
-
-

@@ -22,9 +22,7 @@ extension PersonListViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sectionName = persons[section].fullName
-        
-        return sectionName
+        persons[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
